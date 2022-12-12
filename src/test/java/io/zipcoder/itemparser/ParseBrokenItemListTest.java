@@ -4,6 +4,7 @@ import io.zipcoder.utils.Item;
 import io.zipcoder.ItemParser;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +15,15 @@ public class ParseBrokenItemListTest {
     @Test
     public void test1() {
         // given
+        String name = "";
+        Double price= 0.0;
+        String type= "";
+        String expiration="";
+
         ItemParser itemParser = new ItemParser();
+        ArrayList<ItemParser> arrList = new ArrayList<>();
+       // arrList.add("milk", 3.23, "food", "1/25/2016");
+
         String valueToParse = new StringBuilder()
                 .append("naMe:Milk;price:3.23;type:Food;expiration:1/25/2016##")
                 .append("procrastintion is the assassination of motivation##")

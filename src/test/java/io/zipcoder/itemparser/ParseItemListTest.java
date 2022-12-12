@@ -24,9 +24,10 @@ public class ParseItemListTest {
         Item item2 = new Item("bread", 1.23, "food", "1/02/2016");
         Item item3 = new Item("bread", 1.23, "food", "2/25/2016");
         List<Item> expectedList = Arrays.asList(item1, item2, item3);
-
+        System.out.println(expectedList.get(0).toString());
         // when
         List<Item> actualList = itemParser.parseItemList(valueToParse);
+        System.out.println(actualList.get(0).toString());
 
         // then
         assertEquals(expectedList, actualList);
